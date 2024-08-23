@@ -9,6 +9,9 @@
         Finishing,
         Finished,
         Canceled,
-        Failed
+        Failed,
+        WaitingForPrerequisites,
+        WaitingForResources,
+        Dispatching,
     }
 }

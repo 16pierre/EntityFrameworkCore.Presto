@@ -110,6 +110,9 @@ namespace Data.Presto.Client
 
             if (decodeResults.State == PrestoState.Queued ||
                 decodeResults.State == PrestoState.Planning ||
+                decodeResults.State == PrestoState.Dispatching ||
+                decodeResults.State == PrestoState.WaitingForPrerequisites ||
+                decodeResults.State == PrestoState.WaitingForResources ||
                 decodeResults.State == PrestoState.Starting ||
                 (decodeResults.State == PrestoState.Running && decodeResults.RowCount == 0))
             {

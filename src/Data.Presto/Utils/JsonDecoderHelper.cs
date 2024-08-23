@@ -273,6 +273,12 @@ namespace Data.Presto.Utils
                                 return PrestoState.Canceled;
                             case "FAILED":
                                 return PrestoState.Failed;
+                            case "WAITING_FOR_PREREQUISITES":
+                                return PrestoState.WaitingForPrerequisites;
+                            case "WAITING_FOR_RESOURCES":
+                                return PrestoState.WaitingForResources;
+                            case "DISPATCHING":
+                                return PrestoState.Dispatching;
                         }
                     }
                 }
