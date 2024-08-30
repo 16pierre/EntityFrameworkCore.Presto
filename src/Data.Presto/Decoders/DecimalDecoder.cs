@@ -13,7 +13,7 @@ namespace Data.Presto.Decoders
         {
             var val = reader.GetString();
 
-            if (!decimal.TryParse(val, out var v))
+            if (!decimal.TryParse(val, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out var v))
             {
                 throw new InvalidOperationException($"{val} is not a decimal value");
             }
